@@ -17,7 +17,7 @@ module.exports.pitch = function (remainingRequest) {
   }
   
   var config = require(configFilePath);
-  var styleLoader = config.styleLoader || 'style-loader!css-loader!less-loader';
+  var styleLoader = config.styleLoader || 'style-loader!css-loader!sass-loader';
 
   var styleLoaderCommand = 'require(' + JSON.stringify('-!' + styleLoader + '!' +
       require.resolve('./font-awesome-styles.loader.js') + '!' + configFilePath) + ');';
